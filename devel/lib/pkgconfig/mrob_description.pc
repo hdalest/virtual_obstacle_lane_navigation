@@ -1,0 +1,8 @@
+prefix=/home/esirem/Desktop/M2_Learning/3-M2_ViBot/1-Robotics/3-Robotics_Project/slam_lane_tracking_sim_ws/devel
+
+Name: mrob_description
+Description: Description of mrob_description
+Version: 0.2.0
+Cflags: 
+Libs: -L${prefix}/lib -lmrob_description
+Requires: xacro hector_gazebo_plugins

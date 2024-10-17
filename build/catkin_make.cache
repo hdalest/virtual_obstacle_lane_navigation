@@ -1,0 +1,2 @@
+robotics_course/mrob_control:robotics_course/mrob_description:robotics_course/mrob_gazebo:robotics_course/robotics_course:slam_lane_tracking_pkg
+-DCATKIN_DEVEL_PREFIX=/home/esirem/Desktop/M2_Learning/3-M2_ViBot/1-Robotics/3-Robotics_Project/slam_lane_tracking_sim_ws/devel -DCMAKE_INSTALL_PREFIX=/home/esirem/Desktop/M2_Learning/3-M2_ViBot/1-Robotics/3-Robotics_Project/slam_lane_tracking_sim_ws/install -G Unix Makefiles

@@ -1,0 +1,25 @@
+<launch>
+
+    <env name="GAZEBO_RESOURCE_PATH" value="$(find mrob_gazebo)/worlds" />
+        
+    <!-- Gazebo Simulation with Turtlebot3 Robot -->
+    <include file="$(find mrob_gazebo)/launch/mrob_gazebo.launch">
+    <arg name="world"       value="_autorace_with_obstacles"/>
+    <arg name="enable_ekf"  value="true"/>
+    </include> 
+
+    <!-- Lane Tracking - Node-->
+    <node pkg="slam_lane_tracking_pkg" type="lane_tracking.py" name="lane_tracking_node" output="screen"/>
+
+    <!-- SLAM with Gmapping -->
+    <node pkg="gmapping" type="slam_gmapping" name="gmapping">
+        <param name="base_frame" value="base_link"/>
+        <param name="odom_frame" value="odom" />
+        <param name="map_update_interval" value="3.0"/>
+        <param name="maxUrange" value="15.0"/>
+    </node>
+
+    <!-- Rviz for SLAM -->
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find slam_lane_tracking_pkg)/rviz/slam_rviz.rviz" />
+
+</launch>

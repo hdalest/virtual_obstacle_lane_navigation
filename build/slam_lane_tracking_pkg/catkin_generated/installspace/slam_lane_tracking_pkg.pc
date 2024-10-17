@@ -1,0 +1,8 @@
+prefix=/home/esirem/Desktop/M2_Learning/3-M2_ViBot/1-Robotics/3-Robotics_Project/slam_lane_tracking_sim_ws/install
+
+Name: slam_lane_tracking_pkg
+Description: Description of slam_lane_tracking_pkg
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
