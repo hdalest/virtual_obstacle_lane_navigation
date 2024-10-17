@@ -47,10 +47,10 @@ sudo apt-get update
 sudo apt-get install git
 ```
 ```bash
-git clone https://github.com/EhtishamAshraf/turtlebot3_lane_tracking.git
+git clone https://github.com/EhtishamAshraf/virtual_obstacle_lane_navigation.git
 ```
 ```bash
-cd turtlebot3_lane_tracking
+cd virtual_obstacle_lane_navigation
 ```
 Run the below commands in root folder of the workspace
 ```bash
@@ -63,22 +63,18 @@ Navigate to the Scripts folder inside the package and make the Python files exec
 ```bash
 chmod +x *.py
 ```
-There are two Python scripts located in the scripts folder:
-1. This script is responsible for tracking the lane without saving the robot's pose data.
+
+This script is responsible for tracking the lane without saving the robot's pose data.
 ```bash
 lane_tracking.py
-```
-2. This script tracks the lane while simultaneously saving the robot's pose data.
-```bash
-lane_with_centroids.py
 ```
 
 Now navigate to the launch folder inside the package
 ```bash
-roslaunch lane_tracking.launch
+roslaunch slam_lane_tracking.launch
 ```
 or
 
 ```bash
-roslaunch lane_tracking.launch log_pose_to_file:=true
+roslaunch navigation.launch 
 ```
